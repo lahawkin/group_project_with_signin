@@ -65,4 +65,8 @@ router.post('/logout', (req, res) => {
     }
 })
 
+router.post('/user', (req, res) => {
+    console.log("im working"); 
+})
+
 module.exports = router
