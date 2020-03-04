@@ -69,4 +69,7 @@ router.post('/user', (req, res) => {
     console.log("im working"); 
 })
 
+router.get('/user', (req, res) => {
+    console.log("im working"); 
+})
 module.exports = router
