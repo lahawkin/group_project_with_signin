@@ -48,7 +48,7 @@ router.post(
 
 router.get('/', (req, res, next) => {
     console.log('===== user!!======')
-    console.log(req.user)
+    console.log("req.user inside: ",req.user)
     if (req.user) {
         res.json({ user: req.user })
     } else {
@@ -65,11 +65,11 @@ router.post('/logout', (req, res) => {
     }
 })
 
-router.post('/user', (req, res) => {
-    console.log("im working"); 
-})
+// router.post('/user', (req, res) => {
+//     console.log("im working"); 
+// })
 
-router.get('/user', (req, res) => {
-    console.log("im working"); 
-})
+// router.get('/user', (req, res) => {
+//     console.log("im working"); 
+// })
 module.exports = router
