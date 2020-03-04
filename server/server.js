@@ -6,7 +6,7 @@ const dbConnection = require('./database')
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 const app = express()
-const PORT = 8080
+const PORT = process.env.PORT || 3001; 
 // Route requires
 const user = require('./routes/user')
 
@@ -41,3 +41,8 @@ app.use('/user', user)
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
 })
+
+//trying to get heroku to work
+if (process.env.NODE_ENV == "production"){
+	app.use(expres.static("client/build"));
+}
